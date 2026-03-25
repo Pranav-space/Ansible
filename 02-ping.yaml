@@ -1,0 +1,5 @@
+- name: Ping googleip
+  hosts: googleip
+  tasks:
+    - name: Ping googleip tasks
+      ansible.builtin.ping:
