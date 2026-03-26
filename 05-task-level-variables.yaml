@@ -3,6 +3,6 @@
   tasks:
     - name: Task Level Variable Example
       vars:
-        my_variable: "Task level"
+        my_variable: "Task Level"
       ansible.builtin.debug:
         msg: " Hello from {{ my_variable }} variable."
