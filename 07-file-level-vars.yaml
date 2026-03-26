@@ -1,0 +1,9 @@
+- name: File Level variable
+  hosts: locals
+  connection: local
+  vars_fiel:
+    - vars.yaml
+  tasks:
+    - name: Print variable from file
+      ansible.builtin.debug:
+        msg: "Hello from {{ VARIABLE1 }} variable."
