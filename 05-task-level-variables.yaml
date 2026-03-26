@@ -1,0 +1,8 @@
+- name: Task Level Variables
+  hosts: locals
+  tasks:
+    - name: Task Level Variable Example
+      vars:
+        my_variable: "Task level"
+      ansible.builtin.debug:
+        msg: " Hello from {{ my_variable }} variable."
