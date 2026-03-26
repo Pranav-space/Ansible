@@ -1,0 +1,11 @@
+- name: Priority of Play & Task Level variables
+  hosts: locals
+  connection: local
+  vars:
+    variable1: "Play Level"
+  tasks:
+    - name: Task to Print variable according to the level
+      vars:
+        variable1: "Task Level"
+      ansible.builtin.debug:
+        msg: "Hello from {{ variable1 }} variable."
