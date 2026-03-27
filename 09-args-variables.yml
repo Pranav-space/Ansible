@@ -1,0 +1,7 @@
+- name: Play to read variables from Args
+  hosts: locals
+  connection: local
+  tasks:
+    - name: Task to read args from cli args
+      ansible.builtin.debug:
+        msg: "My name is {{ USERNAME }}, calling variables from {{ VARIABLES }}"
