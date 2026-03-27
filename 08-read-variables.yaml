@@ -1,0 +1,13 @@
+- name: Read variables from user input
+  hosts: locals
+  connection: local
+  vars_prompt:
+    - name: USERNAME
+      prompt: Enter your name bro
+    - name: PASSWORD
+      prompt: Enter your Password man
+      private: yes
+  tasks:
+    - name: Task to read variables from user
+      ansible.builtin.debug:
+        msg: "Your name is {{ USERNAME }} and you password id {{ PASSWORD }}."
