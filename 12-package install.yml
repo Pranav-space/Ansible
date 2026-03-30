@@ -1,0 +1,14 @@
+- name: Install required package
+  hosts: local
+  connection: local
+  become: yes
+  vars_prompt:
+    - name: PKG_NAME
+      prompt: Enter package Name
+      private: false
+  tasks:
+    - name: task package to install
+      ansible.builtin.packages:
+        name: {{ PKG_NAME }}
+        state: present
+
