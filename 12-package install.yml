@@ -8,7 +8,7 @@
       private: false
   tasks:
     - name: task package to install
-      ansible.builtin.packages:
+      ansible.builtin.package:
         name: "{{ PKG_NAME }}"
         state: present
 
