@@ -1,0 +1,22 @@
+- name: Different types of DataTypes
+  hosts: locals
+  connection: local
+  vars:
+    NAME: "Pranav Ch"
+    AGE: 26
+    MARRIED: false
+    QUALITIES:
+      - "Great Learner"
+      - Curiosity
+      - Introvert
+      - "Smart Work"
+    MOREDETAILS:
+      EXPERIENCE: "5 Years"
+      TITLE: "Analyst I Software Engineer"
+  tasks:
+    - name: Task to print Person details
+      ansible.builtin.debug:
+        msg: "My Name is {{ NAME }}, Age is {{ AGE }}, Marital status? : {{ MARRIED }}, Qualities are {{  QUALITIES }}, more details about the person : {{ MOREDETAILS }}."
+
+
+
