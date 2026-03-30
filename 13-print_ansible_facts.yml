@@ -1,0 +1,7 @@
+- name: Play to print ansible_facts
+  hosts: locals
+  connection: local
+  tasks:
+    - name: Task to print ansible_facts
+      ansible.builtin.debug:
+        msg: "{{ ansible_facts }}"
