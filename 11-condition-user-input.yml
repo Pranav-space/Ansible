@@ -4,6 +4,7 @@
   vars_prompt:
     - name: NUM
       prompt: Enter a number
+      type: int
   tasks:
     - name: Task to check number divisible by 2
       ansible.builtin.debug:
