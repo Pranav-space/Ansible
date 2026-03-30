@@ -1,5 +1,5 @@
 - name: Check whether number is divisible by 2
-  host: locals
+  hosts: locals
   connection: local
   vars_prompt:
     - name: NUM
