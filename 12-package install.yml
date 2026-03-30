@@ -9,6 +9,6 @@
   tasks:
     - name: task package to install
       ansible.builtin.packages:
-        name: {{ PKG_NAME }}
+        name: "{{ PKG_NAME }}"
         state: present
 
