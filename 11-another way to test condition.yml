@@ -1,0 +1,20 @@
+- name: Check whether number is divisible by 2
+  hosts: locals
+  connection: local
+  gather_facts: no
+
+  vars_prompt:
+    - name: NUM
+      prompt: Enter a number
+      type: int
+
+  tasks:
+    - name: Number is divisible by 2
+      ansible.builtin.debug:
+        msg: "The number {{ NUM }} is divisible by 2."
+      when: NUM is even
+
+    - name: Number is NOT divisible by 2
+      ansible.builtin.debug:
+        msg: "The number {{ NUM }} is NOT divisible by 2."
+      when: NUM is odd
