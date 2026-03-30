@@ -6,6 +6,7 @@
   vars_prompt:
     - name: NUM
       prompt: Enter a number
+      private: false
 
   tasks:
     - name: Number is divisible by 2
