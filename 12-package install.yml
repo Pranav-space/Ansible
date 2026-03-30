@@ -1,5 +1,5 @@
 - name: Install required package
-  hosts: local
+  hosts: locals
   connection: local
   become: yes
   vars_prompt:
