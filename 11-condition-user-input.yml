@@ -4,16 +4,15 @@
   vars_prompt:
     - name: NUM
       prompt: Enter a number
-      type: int
   tasks:
     - name: Task to check number divisible by 2
       ansible.builtin.debug:
         msg: "The number {{ NUM }} is divisble by 2."
-      when: NUM %2 == 0
+      when: NUM | int % 2 == 0
 
     - name: Task to check number divisible by 2
       ansible.builtin.debug:
         msg: "The number {{ NUM }} is NOT divisble by 2."
-      when: NUM %2 != 0
+      when: NUM | int % 2 != 0
 
     
