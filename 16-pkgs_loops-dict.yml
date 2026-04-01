@@ -1,6 +1,7 @@
 - name: play to install/uninstall packages
   hosts: locals
   connection: local
+  become: yes
   tasks: 
     - name: task to install or uninstall packages
       ansible.builtin.package:
