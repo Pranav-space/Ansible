@@ -1,5 +1,5 @@
 - name: Play to send dict items from cli
-  hosts: local
+  hosts: locals
   connection: local
   become: yes
   tasks:
