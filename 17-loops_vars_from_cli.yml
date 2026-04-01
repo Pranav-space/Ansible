@@ -1,0 +1,11 @@
+- name: Play to send dict items from cli
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+    - name: task to use loops & pass dict item from cli
+      ansible.builtin.package:
+        name: "{{ my_pkg.name }}"
+        state: "{{ my_pkg.status }}"
+      loop: "{{ pkg_list }}"
+      
