@@ -1,0 +1,12 @@
+- name: Play to print loops
+  hosts: locals
+  connection: local
+  tasks:
+    - name: task to use Loops
+      ansible.builtin.debug:
+        msg: " Hello, {{ item }}.. !" #item is the reserved keyword here.
+      loop:
+      - Ranger
+      - Boron
+      - Proton
+      - O'Reaily
