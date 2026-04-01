@@ -7,5 +7,5 @@
       ansible.builtin.package:
         name: "{{ my_pkg.name }}"
         state: "{{ my_pkg.status }}"
-      loop: "{{ pkg_list | dict2items }}"
+      loop: "{{ pkg_list }}"
       
