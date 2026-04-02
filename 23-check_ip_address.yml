@@ -1,0 +1,11 @@
+- name: play to check ip address valid or not
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: ip_addr
+    prompt: Enter IP Address
+    private: false
+  tasks:
+  - name: task to check valid or not ip address
+    ansible.builtin.debug:
+      msg: "The IP Address you provided is {{ ip_addr | netaddr }}"
