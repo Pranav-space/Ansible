@@ -1,5 +1,5 @@
 - name: Split Play
-  hosts: local
+  hosts: locals
   connection: local
   vars:
     tech: "C;C++;Java;Python;C#"
