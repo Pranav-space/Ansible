@@ -8,4 +8,4 @@
   tasks:
   - name: task to check valid or not ip address
     ansible.builtin.debug:
-      msg: "The IP Address you provided is {{ ip_addr | netaddr }}"
+      msg: "The IP Address you provided is {{ ip_addr | ansible.utils.ipaddr }}"
