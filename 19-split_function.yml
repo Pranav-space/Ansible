@@ -1,0 +1,9 @@
+- name: Split Play
+  hosts: local
+  connection: local
+  vars:
+    tech: "C;C++;Java;Python;C#"
+  tasks:
+  - name: split task
+    ansible.builtin.debug:
+      msg: "Hello, {{ tech | split(';') }} !"
