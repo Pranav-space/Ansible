@@ -1,0 +1,12 @@
+- name: Play to print dict or map tas List
+  hosts: locals
+  connection: local
+  vars:
+    Details:
+      name: Pranav
+      age: 26
+      hobbies: "Doing Fun"
+  tasks:
+  - name: task to print dict as list
+    ansible.builtin.debug:
+      msg: "My Details are {{ Details | dict2items}}"
