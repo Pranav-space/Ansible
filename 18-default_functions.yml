@@ -1,0 +1,7 @@
+- name: default functions in Play
+  hosts: locals
+  connection: local
+  tasks:
+  - name: default func in Task
+    ansible.builtin.debug:
+      msg: "Hello, {{ item | default(Ramesh) }}"
