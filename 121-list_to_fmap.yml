@@ -1,0 +1,12 @@
+- name: Play to print list to dict/map
+  hosts: locals
+  connection: local
+  vars:
+    Details:
+      - {'key': 'name', 'value': 'Pranav'}
+      - {'key': 'age', 'value': 26}
+      - {'key': 'hobbies', 'value': 'Doing Fun'}
+  tasks:
+  - name: task to print list to dict/map
+    ansible.builtin.debug:
+      msg: "My Details are {{ Details | items2dict}}"
