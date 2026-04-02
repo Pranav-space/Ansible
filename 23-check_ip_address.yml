@@ -1,5 +1,5 @@
 - name: play to check ip address valid or not
-  hosts: local
+  hosts: locals
   connection: local
   vars_prompt:
   - name: ip_addr
