@@ -2,7 +2,7 @@
   hosts: locals
   connection: local
   vars:
-    name:  Twinkle Little Star
+    name:  Twinkle Little Star #name is a reserved keyword. When used at play level we get warning but no warning as task level.
   tasks:
   - name: task to print all upper letters
     ansible.builtin.debug:
