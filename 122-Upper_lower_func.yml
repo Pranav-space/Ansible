@@ -1,0 +1,13 @@
+- name: play to print with functions
+  hosts: locals
+  connection: local
+  vars:
+    name:  Twinkle Little Star
+  tasks:
+  - name: task to print all upper letters
+    ansible.builtin.debug:
+      msg: "Hello, {{ name | upper }} !"
+
+  - name: task to print all lower letters
+    ansible.builtin.debug:
+      msg: "Hello, {{ name | lower }} !"
